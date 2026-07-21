@@ -1,0 +1,1074 @@
+/* ===========================
+   RESET
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:#070012;
+
+    color:white;
+
+    overflow-x:hidden;
+
+}
+
+/* ===========================
+   NAVBAR
+=========================== */
+
+header{
+
+    position:fixed;
+
+    top:25px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:88%;
+
+    padding:18px 40px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    border-radius:18px;
+
+    background:rgba(255,255,255,.05);
+
+    backdrop-filter:blur(16px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    z-index:999;
+
+    transition:.4s;
+
+}
+
+.logo{
+
+    font-size:24px;
+
+    font-weight:700;
+
+    letter-spacing:3px;
+
+    color:white;
+
+    text-shadow:
+    0 0 15px #8b5cf6,
+    0 0 30px #8b5cf6;
+
+}
+
+nav{
+
+    display:flex;
+
+    gap:35px;
+
+}
+
+nav a{
+
+    text-decoration:none;
+
+    color:white;
+
+    font-size:15px;
+
+    transition:.35s;
+
+}
+
+nav a:hover{
+
+    color:#bb86fc;
+
+    text-shadow:0 0 15px #9f5fff;
+
+}
+
+/* ===========================
+   HERO
+=========================== */
+
+.hero{
+
+    position:relative;
+
+    width:100%;
+
+    height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    overflow:hidden;
+
+    background:
+    radial-gradient(circle at top,
+    #6d28d9 0%,
+    #260046 40%,
+    #090014 100%);
+
+}
+
+.hero-content{
+
+    position:relative;
+
+    z-index:20;
+
+    text-align:center;
+
+}
+
+.hero-content h1{
+
+    font-size:88px;
+
+    font-weight:800;
+
+    letter-spacing:4px;
+
+    text-shadow:
+
+    0 0 20px #b06cff,
+
+    0 0 40px #8b5cf6,
+
+    0 0 70px #5b21b6;
+
+}
+
+.hero-content p{
+
+    margin-top:20px;
+
+    font-size:24px;
+
+    color:#ddd;
+
+}
+
+.hero-buttons{
+
+    margin-top:45px;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:25px;
+
+}
+
+/* ===========================
+   BUTTONS
+=========================== */
+
+.btn{
+
+    text-decoration:none;
+
+    color:white;
+
+    padding:17px 38px;
+
+    border-radius:50px;
+
+    background:
+
+    linear-gradient(90deg,#7c3aed,#9333ea);
+
+    transition:.35s;
+
+    box-shadow:
+
+    0 0 20px rgba(139,92,246,.5);
+
+}
+
+.btn:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:
+
+    0 0 40px #8b5cf6;
+
+}
+
+.secondary{
+
+    background:transparent;
+
+    border:2px solid rgba(255,255,255,.18);
+
+}
+
+/* ===========================
+   SKY
+=========================== */
+
+.stars{
+
+    position:absolute;
+
+    width:100%;
+
+    height:100%;
+
+    background-image:
+
+    radial-gradient(white 1px,transparent 1px),
+
+    radial-gradient(#b794ff 1px,transparent 1px);
+
+    background-size:
+
+    80px 80px,
+
+    150px 150px;
+
+    opacity:.35;
+
+    animation:starsMove 120s linear infinite;
+
+}
+
+.overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    linear-gradient(
+
+    rgba(0,0,0,.05),
+
+    rgba(9,0,20,.55)
+
+    );
+
+}
+
+@keyframes starsMove{
+
+    from{
+
+        transform:translateY(0);
+
+    }
+
+    to{
+
+        transform:translateY(350px);
+
+    }
+
+}/* ===========================
+   MOUNTAINS
+=========================== */
+
+.mountains{
+
+    position:absolute;
+
+    bottom:0;
+
+    width:100%;
+
+    height:320px;
+
+    overflow:hidden;
+
+    z-index:5;
+
+}
+
+.mountain{
+
+    position:absolute;
+
+    bottom:0;
+
+    width:120%;
+
+    left:-10%;
+
+    clip-path:polygon(
+    0% 100%,
+    10% 70%,
+    20% 85%,
+    35% 45%,
+    50% 80%,
+    60% 55%,
+    75% 88%,
+    90% 40%,
+    100% 100%
+    );
+
+}
+
+.layer1{
+
+    height:300px;
+
+    background:#18002b;
+
+}
+
+.layer2{
+
+    height:240px;
+
+    background:#2d0055;
+
+    opacity:.9;
+
+}
+
+.layer3{
+
+    height:170px;
+
+    background:#5d2bc7;
+
+    opacity:.75;
+
+}
+
+/* ===========================
+   FOG
+=========================== */
+
+.fog{
+
+    position:absolute;
+
+    bottom:0;
+
+    width:220%;
+
+    height:260px;
+
+    left:-60%;
+
+    background:
+
+    radial-gradient(circle,
+    rgba(190,120,255,.25),
+    transparent 70%);
+
+    filter:blur(70px);
+
+    animation:fogMove 28s linear infinite;
+
+}
+
+@keyframes fogMove{
+
+    from{
+
+        transform:translateX(0);
+
+    }
+
+    to{
+
+        transform:translateX(250px);
+
+    }
+
+}
+
+/* ===========================
+   COMMON SECTION
+=========================== */
+
+section{
+
+    position:relative;
+
+    padding:130px 10%;
+
+}
+
+.container{
+
+    width:100%;
+
+    max-width:1200px;
+
+    margin:auto;
+
+}
+
+/* ===========================
+   ABOUT
+=========================== */
+
+.about{
+
+    background:#100019;
+
+    text-align:center;
+
+}
+
+.about h2{
+
+    font-size:52px;
+
+    margin-bottom:35px;
+
+    text-shadow:
+
+    0 0 20px #8b5cf6;
+
+}
+
+.about p{
+
+    font-size:20px;
+
+    line-height:2;
+
+    color:#d5d5d5;
+
+    max-width:900px;
+
+    margin:25px auto;
+
+}
+
+/* ===========================
+   PROJECT
+=========================== */
+
+.project{
+
+    background:#0c0016;
+
+}
+
+.project h2{
+
+    text-align:center;
+
+    font-size:52px;
+
+    margin-bottom:60px;
+
+}
+
+.project-card{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:70px;
+
+    flex-wrap:wrap;
+
+}
+
+.project-left{
+
+    flex:1;
+
+}
+
+.project-left h3{
+
+    font-size:30px;
+
+    margin-bottom:25px;
+
+    color:#c49dff;
+
+}
+
+.project-left p{
+
+    font-size:19px;
+
+    line-height:1.9;
+
+    color:#d9d9d9;
+
+}
+
+.project-right{
+
+    flex:1;
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+.poster{
+
+    width:320px;
+
+    height:430px;
+
+    border-radius:25px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:36px;
+
+    font-weight:700;
+
+    background:
+
+    linear-gradient(160deg,
+    #240046,
+    #7b2cff);
+
+    box-shadow:
+
+    0 0 40px rgba(139,92,246,.45);
+
+}
+
+/* ===========================
+   TEAM
+=========================== */
+
+.team{
+
+    background:#11001d;
+
+}
+
+.team h2{
+
+    text-align:center;
+
+    font-size:52px;
+
+    margin-bottom:60px;
+
+}
+
+.team-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(240px,1fr));
+
+    gap:35px;
+
+}
+
+.team-card{
+
+    padding:40px;
+
+    border-radius:25px;
+
+    text-align:center;
+
+    background:rgba(255,255,255,.05);
+
+    backdrop-filter:blur(15px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    transition:.35s;
+
+}
+
+.team-card:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:
+
+    0 0 35px rgba(139,92,246,.45);
+
+}
+
+.team-card h3{
+
+    margin-bottom:15px;
+
+    font-size:25px;
+
+}
+
+.team-card p{
+
+    color:#d4d4d4;
+
+}
+
+/* ===========================
+   CONTACT
+=========================== */
+
+.contact{
+
+    background:#090014;
+
+    text-align:center;
+
+}
+
+.contact h2{
+
+    font-size:50px;
+
+    margin-bottom:30px;
+
+}
+
+.socials{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:30px;
+
+    flex-wrap:wrap;
+
+    margin-top:45px;
+
+}
+
+.socials a{
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:15px 30px;
+
+    border-radius:50px;
+
+    background:#5d2bc7;
+
+    transition:.35s;
+
+}
+
+.socials a:hover{
+
+    transform:translateY(-5px);
+
+    background:#7b2cff;
+
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+footer{
+
+    text-align:center;
+
+    padding:50px;
+
+    background:black;
+
+}
+
+.footer-content h2{
+
+    margin-bottom:15px;
+
+}
+
+.footer-content p{
+
+    color:#bdbdbd;
+
+    margin:10px 0;
+
+}/* ===========================
+   SCROLL REVEAL
+=========================== */
+
+section{
+
+opacity:0;
+
+transform:translateY(80px);
+
+transition:1s ease;
+
+}
+
+section.show{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+/* ===========================
+   SHOOTING STAR
+=========================== */
+
+.hero::before{
+
+content:"";
+
+position:absolute;
+
+top:-150px;
+
+left:-200px;
+
+width:350px;
+
+height:2px;
+
+background:linear-gradient(to right,
+white,
+transparent);
+
+transform:rotate(-35deg);
+
+box-shadow:
+0 0 25px white,
+0 0 50px #b56cff;
+
+animation:shootingStar 7s linear infinite;
+
+opacity:.8;
+
+}
+
+@keyframes shootingStar{
+
+0%{
+
+transform:
+translate(-200px,-200px)
+rotate(-35deg);
+
+opacity:0;
+
+}
+
+10%{
+
+opacity:1;
+
+}
+
+100%{
+
+transform:
+translate(1900px,900px)
+rotate(-35deg);
+
+opacity:0;
+
+}
+
+}
+
+/* ===========================
+   TWINKLING STARS
+=========================== */
+
+.stars::after{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+background-image:
+
+radial-gradient(white 1.3px,transparent 1.3px),
+
+radial-gradient(#d6a7ff 1px,transparent 1px),
+
+radial-gradient(#ffffff 2px,transparent 2px);
+
+background-size:
+
+120px 120px,
+
+180px 180px,
+
+260px 260px;
+
+animation:twinkle 4s ease-in-out infinite alternate;
+
+opacity:.7;
+
+}
+
+@keyframes twinkle{
+
+from{
+
+opacity:.25;
+
+}
+
+to{
+
+opacity:.9;
+
+}
+
+}
+
+/* ===========================
+   HERO FLOAT
+=========================== */
+
+.hero-content{
+
+animation:heroFloat 4s ease-in-out infinite;
+
+}
+
+@keyframes heroFloat{
+
+0%{
+
+transform:translateY(0px);
+
+}
+
+50%{
+
+transform:translateY(-10px);
+
+}
+
+100%{
+
+transform:translateY(0px);
+
+}
+
+}
+
+/* ===========================
+   BUTTON GLOW
+=========================== */
+
+.btn{
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.btn::before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+
+left:-120%;
+
+width:60%;
+
+height:100%;
+
+background:
+
+linear-gradient(
+
+90deg,
+
+transparent,
+
+rgba(255,255,255,.45),
+
+transparent
+
+);
+
+transition:.8s;
+
+}
+
+.btn:hover::before{
+
+left:160%;
+
+}
+
+/* ===========================
+   HEADER SCROLL
+=========================== */
+
+header.active{
+
+background:
+
+rgba(10,0,25,.85);
+
+backdrop-filter:
+
+blur(20px);
+
+box-shadow:
+
+0 0 35px rgba(139,92,246,.45);
+
+}
+
+/* ===========================
+   CUSTOM SCROLLBAR
+=========================== */
+
+::-webkit-scrollbar{
+
+width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:#0a0015;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:#7c3aed;
+
+border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+background:#9f67ff;
+
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media(max-width:900px){
+
+header{
+
+width:95%;
+
+padding:15px 20px;
+
+}
+
+nav{
+
+gap:15px;
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+}
+
+.hero-content h1{
+
+font-size:48px;
+
+}
+
+.hero-content p{
+
+font-size:18px;
+
+}
+
+.hero-buttons{
+
+flex-direction:column;
+
+align-items:center;
+
+}
+
+.project-card{
+
+flex-direction:column;
+
+}
+
+.poster{
+
+width:260px;
+
+height:360px;
+
+}
+
+.team h2,
+.about h2,
+.project h2,
+.contact h2{
+
+font-size:38px;
+
+}
+
+.about p,
+.project-left p{
+
+font-size:17px;
+
+line-height:1.8;
+
+}
+
+}
+
+/* ===========================
+   END
+=========================== */
