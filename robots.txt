@@ -1,1 +1,4 @@
+User-agent: *
+Allow: /
 
+Sitemap: https://astranovastudiox-bit.github.io/Astra-Nova-Studios/sitemap.xml
